@@ -1,4 +1,6 @@
 const grid = document.querySelector(".grid");
+const spanPlayer = document.querySelector(".player");
+const timer = document.querySelector(".timer");
 
 const characters = [
 "dog",
@@ -27,7 +29,8 @@ const checkEndgame = () => {
     const disabledCards = document.querySelectorAll(".disabled-card");
 
     if(disabledCards.length == 20) {
-        alert("Parabéns, você venceu!");
+        clearInterval(this.loop)
+        alert(`Parabéns, ${spanPlayer.innerHTML}! seu tempo foi: ${timer.innerHTML}`); 
     }
 }    
 
@@ -103,4 +106,19 @@ const loadGame = () => {
     }); 
 }
 
-loadGame();
+const startTimer = () => {
+
+    this.loop = setInterval(() => {
+
+        const currentTime = +timer.innerHTML;
+        timer.innerHTML = currentTime + 1;
+        
+    }, 1000);
+}
+
+window.onload = () => { 
+    spanPlayer.innerHTML = localStorage.getItem("player"); 
+    startTimer();
+    loadGame();
+ 
+}
