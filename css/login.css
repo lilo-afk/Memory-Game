@@ -1,3 +1,7 @@
+body {
+  background: url(../img/bg.jpg) no-repeat top center/cover;
+}
+
 .login-form {
   display: flex;
   flex-direction: column;
@@ -16,6 +20,7 @@
 
 .login-header img {
   width: 100px;
+  margin-bottom: 15px;
 }
 
 .login-header h1 {
@@ -33,6 +38,7 @@
   padding: 15px;
   outline: none;
   width: 100%;
+  background-color: #aaaaaab3;
 }
 .login-input:focus {
   border: 2px solid var(--btn-color);
@@ -55,7 +61,22 @@
 }
 
 .login-btn:disabled {
-  background-color: #eee;
+  background-color: #ddddddd7;
   color: #aaa;
   cursor: auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+footer p {
+  opacity: 0.5;
+}
+
+footer a {
+  color: #121212;
 }
