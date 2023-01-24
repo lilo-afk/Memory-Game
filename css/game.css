@@ -1,9 +1,13 @@
+body {
+    background-color: #eee;
+}
+
 .grid {
     display: grid;
-    grid-template-columns: repeat(5, 200px);
+    grid-template-columns: repeat(5, 120px);
     width: 100%;
     gap: 15px;
-    max-width: 800px;
+    max-width: 650px;
     margin: 0 auto;
 }
 
@@ -24,10 +28,10 @@
     background-position: center;
     border: 1px solid #121212;
     border-radius: 10px;
+    transition: all 400ms ease;
 }
 
 .front {
-    background-image: url(../img/bear.png);
     transform: rotateY(180deg);
 }
 
@@ -36,6 +40,11 @@
     backface-visibility: hidden;
 }
 
-.card:hover {
-    transform: rotateY(180deg);
+.reveal-card {
+    transform: rotateY(180deg);   
+}
+
+.disabled-card {
+    filter: saturate(0);
+    opacity: 0.5;
 }
