@@ -1,6 +1,8 @@
 const grid = document.querySelector(".grid");
 const spanPlayer = document.querySelector(".player");
 const timer = document.querySelector(".timer");
+const modal = document.querySelector(".pop-up");
+const btnClose = document.querySelector(".start");
 
 const characters = [
 "dog",
@@ -30,8 +32,14 @@ const checkEndgame = () => {
 
     if(disabledCards.length == 20) {
         clearInterval(this.loop)
-        alert(`Parabéns, ${spanPlayer.innerHTML}! seu tempo foi: ${timer.innerHTML}`); 
+        modal.showModal();
+
+       btnClose.onclick = () =>{
+        location.reload();
+
     }
+
+        }
 }    
 
 const checkCards = () => {
