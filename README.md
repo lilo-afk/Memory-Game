@@ -1,7 +1,7 @@
 <h1 align="center"> Jogo da Memória </h1>
 
 <p align="center">
-  <img alt="Projeto Jogo da Memória" src=".github/preview.png" width="100%">
+  <img alt="Projeto Jogo da Memória" src=".Github/preview.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
